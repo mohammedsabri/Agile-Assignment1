@@ -52,3 +52,5 @@ services:
        - mongo-express-database-network
     depends_on:
       - database
+    profiles:
+      - development 
