@@ -22,11 +22,13 @@ services:
        - database-movies-network
     depends_on:
       - database
+      - cache
 
   cache:
     container_name: redis
     image: redis:alpine
     networks:
+    - cache-movies-network
      
 
   database:
